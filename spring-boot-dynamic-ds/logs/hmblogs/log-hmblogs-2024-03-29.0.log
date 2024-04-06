@@ -1,0 +1,625 @@
+2024-03-29 13:48:13.273 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 5600 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-29 13:48:13.291 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-29 13:48:14.953 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-29 13:48:15.021 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 59 ms. Found 1 MongoDB repository interfaces.
+2024-03-29 13:48:16.070 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-29 13:48:16.088 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-29 13:48:16.090 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-29 13:48:16.090 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-29 13:48:16.600 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-29 13:48:16.600 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3163 ms
+2024-03-29 13:48:17.058 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-29 13:48:17.270 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-29 13:48:19.716 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-29 13:48:22.003 [cluster-ClusterId{value='66065623476b7247568ec36d', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-29 13:48:23.494 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-29 13:48:23.960 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-29 13:48:23.970 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 12.169 seconds (JVM running for 15.848)
+2024-03-29 13:59:50.162 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-29 13:59:50.163 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-29 13:59:50.165 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-03-29 13:59:50.681 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 364ms} 
+2024-03-29 13:59:50.685 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-29 13:59:50.685 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.685 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 13:59:50.688 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.689 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-29 13:59:50.692 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-29 13:59:50.696 [Druid-ConnectionPool-Create-196340990] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-29 13:59:50.697 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 13:59:50.697 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.698 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 13:59:50.736 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 13:59:50.736 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1cd19055
+2024-03-29 13:59:50.740 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.781 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 36 ms}
+2024-03-29 13:59:50.782 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 13:59:50.786 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 13:59:50.786 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@16f7a00
+2024-03-29 13:59:50.791 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@5f2de51c - Field level information: 
+	com.mysql.cj.result.Field@6ef1ac5e[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 13:59:50.797 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 13:59:50.798 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 13:59:50.804 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 2
+2024-03-29 13:59:50.806 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|2              |
+|---------------|
+
+2024-03-29 13:59:50.806 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 13:59:50.807 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 13:59:50.807 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@e5df705
+2024-03-29 13:59:50.807 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 13:59:50.807 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 13:59:50.807 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 13:59:50.811 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 13:59:50.811 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 13:59:50.813 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 13:59:50.813 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.813 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 13:59:50.816 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 13:59:50.817 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@77954a54
+2024-03-29 13:59:50.817 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 0) returned 
+2024-03-29 13:59:50.817 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 10) returned 
+2024-03-29 13:59:50.817 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 13:59:50.819 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 0,10  {executed in 2 ms}
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@39a226c2
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@36b08078 - Field level information: 
+	com.mysql.cj.result.Field@28008854[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@751ab0ea[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@5d261cbd[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@6fa7f421[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@434983a9[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@6374f6ca[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@e5added[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 13:59:50.820 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 13:59:50.821 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 1
+2024-03-29 13:59:50.821 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用OAuth
+2024-03-29 13:59:50.821 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和
+2024-03-29 13:59:50.822 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 2
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用AES
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 第一步，。第二步，。第三步，。
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 13:59:50.823 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|blog_id |blog_title  |blog_content                                                                                |created_by |created_datetime      |last_updated_by |last_updated_datetime |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|1       |如何学习使用OAuth |fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和 |heming     |2024-03-28 17:59:10.0 |heming          |2024-03-28 17:59:10.0 |
+|2       |如何学习使用AES   |第一步，。第二步，。第三步，。                                                                             |heming     |2024-03-28 18:00:02.0 |heming          |2024-03-28 18:00:02.0 |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@57554cc4
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 13:59:50.825 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:00:09.645 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:00:09.645 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:00:09.645 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:00:09.645 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:00:09.646 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        user_id, user_name, password, user_remark
+     
+        from t_user
+        where user_name=?
+        and password=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6b836fa0
+2024-03-29 14:00:09.646 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "heming") returned 
+2024-03-29 14:00:09.646 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "Y6YSJVfPufKu78mjUAPvtA==") returned 
+2024-03-29 14:00:09.646 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. select user_id, user_name, password, user_remark from t_user where user_name='heming' and password='Y6YSJVfPufKu78mjUAPvtA=='  {executed in 6 ms}
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@fedc7aa
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@3e8a0c4e - Field level information: 
+	com.mysql.cj.result.Field@3d713518[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_id,originalColumnName=user_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4d7fb379[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_name,originalColumnName=user_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@2c4efdeb[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@42487c50[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_remark,originalColumnName=user_remark,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:00:09.652 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(user_id) returned 1
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_name) returned heming
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(password) returned Y6YSJVfPufKu78mjUAPvtA==
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_remark) returned 发生的
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 
+|--------|----------|-------------------------|------------|
+|user_id |user_name |password                 |user_remark |
+|--------|----------|-------------------------|------------|
+|1       |heming    |Y6YSJVfPufKu78mjUAPvtA== |发生的         |
+|--------|----------|-------------------------|------------|
+
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@46f1c922
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:00:09.653 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:00:09.654 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:00:39.486 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:00:39.486 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:00:39.486 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@8188e97
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "如何学习使用AES") returned 
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "第一步，。第二步，。第三步，。") returned 
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-29 14:00:39.487 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:00:39.496 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('如何学习使用AES','第一步，。第二步，。第三步，。','heming',now(),'heming',now())  {executed in 9 ms}
+2024-03-29 14:00:39.496 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-03-29 14:00:39.496 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-03-29 14:00:39.496 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:00:39.497 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:00:39.497 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:23.720 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@7b2f6462
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "如何学习使用Spring") returned 
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "第一步，mvc。第二步，boot。第三步，cloud。") returned 
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-29 14:01:23.721 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('如何学习使用Spring','第一步，mvc。第二步，boot。第三步，cloud。','heming',now(),'heming',now())  {executed in 9 ms}
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:01:23.731 [http-nio-8081-exec-7] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@773118f4
+2024-03-29 14:01:34.991 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 3 ms}
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@79f6e862
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@7dc97384 - Field level information: 
+	com.mysql.cj.result.Field@38cbe259[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 4
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|4              |
+|---------------|
+
+2024-03-29 14:01:34.994 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@939fe6e
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:01:34.995 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:34.996 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:34.996 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:34.996 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:01:34.997 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:01:34.997 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3fdaf99e
+2024-03-29 14:01:34.997 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 0) returned 
+2024-03-29 14:01:34.997 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 2) returned 
+2024-03-29 14:01:34.997 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:35.000 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 0,2  {executed in 3 ms}
+2024-03-29 14:01:35.000 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:01:35.000 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:01:35.000 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@58e41d16
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@aacd7dd - Field level information: 
+	com.mysql.cj.result.Field@4ca09268[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@24de946b[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@5caa214b[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@30d4173c[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@782fe09c[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@28025e3e[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@252f820c[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 1
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用OAuth
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和
+2024-03-29 14:01:35.001 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 2
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用AES
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 第一步，。第二步，。第三步，。
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 14:01:35.002 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|blog_id |blog_title  |blog_content                                                                                |created_by |created_datetime      |last_updated_by |last_updated_datetime |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|1       |如何学习使用OAuth |fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和 |heming     |2024-03-28 17:59:10.0 |heming          |2024-03-28 17:59:10.0 |
+|2       |如何学习使用AES   |第一步，。第二步，。第三步，。                                                                             |heming     |2024-03-28 18:00:02.0 |heming          |2024-03-28 18:00:02.0 |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@327e3154
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:01:35.003 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:01:35.004 [http-nio-8081-exec-9] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:43.189 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:43.189 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:43.189 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:01:43.190 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:01:43.190 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5df0d601
+2024-03-29 14:01:43.191 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 2 ms}
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1d33ea8f
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@562db1a0 - Field level information: 
+	com.mysql.cj.result.Field@5ff68405[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:01:43.193 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 4
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|4              |
+|---------------|
+
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@688f4b4
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:43.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:01:43.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:01:43.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3d13e574
+2024-03-29 14:01:43.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 10) returned 
+2024-03-29 14:01:43.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 2) returned 
+2024-03-29 14:01:43.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:01:43.198 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 10,2  {executed in 2 ms}
+2024-03-29 14:01:43.198 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:01:43.198 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:01:43.199 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@562e987f
+2024-03-29 14:01:43.200 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@3a2657af - Field level information: 
+	com.mysql.cj.result.Field@7b4a290b[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@59d05b53[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@7b9fcd76[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@730c7685[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@59240b9e[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@275c92a[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@704406f[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:01:43.200 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:01:43.200 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+|blog_id |blog_title |blog_content |created_by |created_datetime |last_updated_by |last_updated_datetime |
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+
+2024-03-29 14:01:43.200 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:01:43.201 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:01:43.201 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@6ead27c4
+2024-03-29 14:01:43.201 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:01:43.201 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:01:43.202 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:01:43.202 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:01:43.202 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:02:37.986 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-03-29 14:02:37.993 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 6ms} 
+2024-03-29 14:02:37.993 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-03-29 14:02:37.994 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-03-29 14:07:41.904 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 8388 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-29 14:07:41.916 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-29 14:07:43.342 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-29 14:07:43.480 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 124 ms. Found 1 MongoDB repository interfaces.
+2024-03-29 14:07:45.060 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-29 14:07:45.082 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-29 14:07:45.086 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-29 14:07:45.086 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-29 14:07:45.337 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-29 14:07:45.337 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3227 ms
+2024-03-29 14:07:45.565 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-29 14:07:45.736 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-29 14:07:48.225 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-29 14:07:50.407 [cluster-ClusterId{value='66065ab4acd7aa3651c04d25', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-29 14:07:52.013 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-29 14:07:52.852 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-29 14:07:52.863 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 12.531 seconds (JVM running for 15.85)
+2024-03-29 14:08:15.700 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-29 14:08:15.701 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-29 14:08:15.702 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-29 14:08:16.369 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 504ms} 
+2024-03-29 14:08:16.372 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-29 14:08:16.373 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.373 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:16.376 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.377 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-29 14:08:16.380 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-29 14:08:16.383 [Druid-ConnectionPool-Create-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-29 14:08:16.384 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:16.384 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.385 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:08:16.425 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:08:16.425 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5c305833
+2024-03-29 14:08:16.431 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.480 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 47 ms}
+2024-03-29 14:08:16.481 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:08:16.485 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:08:16.485 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@73414080
+2024-03-29 14:08:16.493 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@2504aded - Field level information: 
+	com.mysql.cj.result.Field@4b813ce9[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:08:16.498 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:08:16.498 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:16.508 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 4
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|4              |
+|---------------|
+
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@25254ea0
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:08:16.511 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:08:16.512 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:08:16.515 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:08:16.515 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:16.516 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:16.517 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.517 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:08:16.519 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:08:16.519 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@753e978f
+2024-03-29 14:08:16.520 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 2) returned 
+2024-03-29 14:08:16.520 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 2) returned 
+2024-03-29 14:08:16.520 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 2,2  {executed in 5 ms}
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5f6ce305
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@44de78be - Field level information: 
+	com.mysql.cj.result.Field@42b9c76[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@5a8f193[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@3de44ee8[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@a48da62[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@52d82f71[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@10be78d0[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@f32f721[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:08:16.525 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:08:16.526 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:16.527 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 3
+2024-03-29 14:08:16.527 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用AES二
+2024-03-29 14:08:16.527 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 222第一步，。第二步，。第三步，。
+2024-03-29 14:08:16.528 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:08:16.529 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-29 14:00:39.0
+2024-03-29 14:08:16.530 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:08:16.530 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-29 14:00:39.0
+2024-03-29 14:08:16.530 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 4
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用Spring
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 第一步，mvc。第二步，boot。第三步，cloud。
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-29 14:01:23.0
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:08:16.531 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-29 14:01:23.0
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 
+|--------|-------------|----------------------------|-----------|----------------------|----------------|----------------------|
+|blog_id |blog_title   |blog_content                |created_by |created_datetime      |last_updated_by |last_updated_datetime |
+|--------|-------------|----------------------------|-----------|----------------------|----------------|----------------------|
+|3       |如何学习使用AES二   |222第一步，。第二步，。第三步，。          |heming     |2024-03-29 14:00:39.0 |heming          |2024-03-29 14:00:39.0 |
+|4       |如何学习使用Spring |第一步，mvc。第二步，boot。第三步，cloud。 |heming     |2024-03-29 14:01:23.0 |heming          |2024-03-29 14:01:23.0 |
+|--------|-------------|----------------------------|-----------|----------------------|----------------|----------------------|
+
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@4c449d38
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:08:16.532 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:08:16.533 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:08:16.533 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:40.561 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:40.561 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:40.562 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:08:40.562 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:08:40.562 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@49cf024
+2024-03-29 14:08:40.562 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:40.565 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 3 ms}
+2024-03-29 14:08:40.565 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:08:40.565 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@a5b0ec7
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@e649b54 - Field level information: 
+	com.mysql.cj.result.Field@4b6604fc[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 4
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|4              |
+|---------------|
+
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:08:40.566 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@7ae7ce86
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:40.567 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-29 14:08:40.568 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-29 14:08:40.568 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@50f344b5
+2024-03-29 14:08:40.568 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 0) returned 
+2024-03-29 14:08:40.568 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 2) returned 
+2024-03-29 14:08:40.568 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 0,2  {executed in 5 ms}
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2b49fbb3
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@45bc154e - Field level information: 
+	com.mysql.cj.result.Field@16b6081[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4bf74af5[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@2f07a45b[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@a34c290[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@5081d43f[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@21509c38[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@33e7c135[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-29 14:08:40.573 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 1
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用OAuth
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:08:40.574 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 17:59:10.0
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 2
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用AES
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 第一步，。第二步，。第三步，。
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-29 14:08:40.575 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 18:00:02.0
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|blog_id |blog_title  |blog_content                                                                                |created_by |created_datetime      |last_updated_by |last_updated_datetime |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|1       |如何学习使用OAuth |fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和 |heming     |2024-03-28 17:59:10.0 |heming          |2024-03-28 17:59:10.0 |
+|2       |如何学习使用AES   |第一步，。第二步，。第三步，。                                                                             |heming     |2024-03-28 18:00:02.0 |heming          |2024-03-28 18:00:02.0 |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@4195aa75
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-29 14:08:40.576 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:38:45.928 [Druid-ConnectionPool-Destroy-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-29 14:38:45.937 [Druid-ConnectionPool-Destroy-95545487] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 9ms} 
+2024-03-29 14:38:45.937 [Druid-ConnectionPool-Destroy-95545487] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-03-29 17:26:56.417 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-03-29 17:26:56.421 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
