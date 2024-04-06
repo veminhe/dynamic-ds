@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  servlet.context-path: /hmblogs
+
+#配置数据源
+spring:
+  datasource:
+    datasource1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:ds0}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      username: ${DB_USER:root}
+      password: ${DB_PWD:123456}
+    datasource2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:ds1}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      username: ${DB_USER:root}
+      password: ${DB_PWD:123456}

@@ -1,0 +1,66 @@
+2024-04-06 16:59:14.547 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 19488 (D:\workspace\dynamic-ds\target\classes started by iss-67 in D:\workspace\dynamic-ds)
+2024-04-06 16:59:14.567 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-06 16:59:15.884 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-06 16:59:15.903 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+2024-04-06 16:59:17.228 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-06 16:59:17.239 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 16:59:17.240 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-06 16:59:17.241 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-06 16:59:17.505 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-06 16:59:17.505 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2702 ms
+2024-04-06 16:59:18.411 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-0} closing ...
+2024-04-06 16:59:18.411 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-0} closing ...
+2024-04-06 16:59:18.414 [main] INFO  [org.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2024-04-06 16:59:18.535 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-06 17:00:07.505 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 28360 (D:\workspace\dynamic-ds\target\classes started by iss-67 in D:\workspace\dynamic-ds)
+2024-04-06 17:00:07.519 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-06 17:00:08.548 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-06 17:00:08.562 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 8 ms. Found 0 MongoDB repository interfaces.
+2024-04-06 17:00:09.815 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-06 17:00:09.826 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 17:00:09.828 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-06 17:00:09.828 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-06 17:00:10.117 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-06 17:00:10.117 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2433 ms
+2024-04-06 17:00:13.148 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-06 17:00:15.288 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 17:00:15.310 [cluster-ClusterId{value='66110f1da80bba68ae260516', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-06 17:00:15.751 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-06 17:00:15.765 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 9.655 seconds (JVM running for 12.557)
+2024-04-06 17:02:39.133 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 20984 (D:\workspace\dynamic-ds\target\classes started by iss-67 in D:\workspace\dynamic-ds)
+2024-04-06 17:02:39.160 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-06 17:02:41.250 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-06 17:02:41.277 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 17:02:41.281 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-06 17:02:41.281 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-06 17:02:41.498 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-06 17:02:41.498 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2133 ms
+2024-04-06 17:02:44.800 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 17:02:45.126 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-06 17:02:45.138 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 7.33 seconds (JVM running for 10.215)
+2024-04-06 17:08:26.087 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 17:08:26.087 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-04-06 17:08:26.089 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-04-06 17:08:26.637 [http-nio-8081-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-06 17:09:14.785 [http-nio-8081-exec-3] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-2} inited

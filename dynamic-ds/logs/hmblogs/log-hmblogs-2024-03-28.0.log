@@ -1,0 +1,762 @@
+2024-03-28 16:45:05.231 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 17360 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 16:45:05.247 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 16:45:06.370 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 16:45:06.438 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 61 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 16:45:07.387 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 16:45:07.398 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 16:45:07.399 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 16:45:07.399 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 16:45:07.649 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 16:45:07.650 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2287 ms
+2024-03-28 16:45:07.871 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 16:45:08.029 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 16:45:09.839 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 16:45:12.037 [cluster-ClusterId{value='66052e15d143ec6db369b275', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 16:45:12.765 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 16:45:12.863 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 16:45:12.872 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 8.675 seconds (JVM running for 11.711)
+2024-03-28 16:59:36.630 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 16:59:36.632 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 16:59:36.633 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-28 16:59:37.155 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 351ms} 
+2024-03-28 16:59:37.156 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 16:59:37.157 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 16:59:37.157 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 16:59:37.158 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 16:59:37.158 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 16:59:37.164 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 16:59:37.169 [Druid-ConnectionPool-Create-2047145776] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 16:59:37.170 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 16:59:37.170 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 16:59:37.171 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 16:59:37.194 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 16:59:37.195 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        user_id, user_name, password, user_remark
+     
+        from t_user) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@7d2058cf
+2024-03-28 16:59:37.199 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 16:59:37.221 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select user_id, user_name, password, user_remark from t_user  {executed in 21 ms}
+2024-03-28 16:59:37.221 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 16:59:37.224 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 16:59:37.224 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6784b352
+2024-03-28 16:59:37.232 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@3a0391b5 - Field level information: 
+	com.mysql.cj.result.Field@4f25e196[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_id,originalColumnName=user_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4f36c3e[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_name,originalColumnName=user_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@3fb2f839[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@191a4843[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_remark,originalColumnName=user_remark,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+2024-03-28 16:59:37.234 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 16:59:37.236 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|----------|---------|------------|
+|user_id |user_name |password |user_remark |
+|--------|----------|---------|------------|
+|--------|----------|---------|------------|
+
+2024-03-28 16:59:37.236 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 16:59:37.236 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 16:59:37.237 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@3547f550
+2024-03-28 16:59:37.237 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 16:59:37.237 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 16:59:37.237 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 16:59:37.238 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 16:59:37.238 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:03:56.297 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 4300 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:03:56.309 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:03:57.423 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:03:57.508 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 78 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:03:58.799 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:03:58.812 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:03:58.813 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:03:58.813 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:03:59.090 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:03:59.091 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2598 ms
+2024-03-28 17:03:59.394 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:03:59.529 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:04:01.404 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:04:03.545 [cluster-ClusterId{value='66053281e96b805544a97bd8', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:04:04.784 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:04:05.049 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:04:05.058 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 9.82 seconds (JVM running for 12.724)
+2024-03-28 17:05:11.262 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:05:11.262 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:05:11.263 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-28 17:05:11.802 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 388ms} 
+2024-03-28 17:05:11.802 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 17:05:11.802 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:05:11.803 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:05:11.803 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:05:11.804 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 17:05:11.823 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 17:05:11.840 [Druid-ConnectionPool-Create-94690722] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 17:05:11.840 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:05:11.841 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:05:11.842 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:05:11.863 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:05:11.863 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        user_id, user_name, password, user_remark
+     
+        from t_user
+        where user_name=?
+        and password=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@502e42b2
+2024-03-28 17:05:11.867 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "heming") returned 
+2024-03-28 17:05:11.868 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "123123") returned 
+2024-03-28 17:05:11.868 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:05:11.900 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select user_id, user_name, password, user_remark from t_user where user_name='heming' and password='123123'  {executed in 30 ms}
+2024-03-28 17:05:11.901 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 17:05:11.904 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 17:05:11.904 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@75b3d874
+2024-03-28 17:05:11.907 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@7be610d1 - Field level information: 
+	com.mysql.cj.result.Field@353b3558[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_id,originalColumnName=user_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@531e74c5[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_name,originalColumnName=user_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@753f9e8a[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@3e946864[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_remark,originalColumnName=user_remark,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+2024-03-28 17:05:11.910 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 17:05:11.910 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 17:05:11.934 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(user_id) returned 1
+2024-03-28 17:05:11.935 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_name) returned heming
+2024-03-28 17:05:11.935 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(password) returned 123123
+2024-03-28 17:05:11.935 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_remark) returned 发生的
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|----------|---------|------------|
+|user_id |user_name |password |user_remark |
+|--------|----------|---------|------------|
+|1       |heming    |123123   |发生的         |
+|--------|----------|---------|------------|
+
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@7c5cc215
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 17:05:11.937 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 17:05:11.938 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:05:11.940 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:05:11.940 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:34:04.103 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 6752 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:34:04.117 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:34:05.555 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:34:05.705 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 134 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:34:07.422 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:34:07.444 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:34:07.445 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:34:07.446 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:34:07.840 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:34:07.841 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3477 ms
+2024-03-28 17:34:08.086 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:34:08.342 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:34:11.455 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:34:13.755 [cluster-ClusterId{value='66053993c7042b4298344e90', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:34:15.539 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:34:15.865 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:34:15.876 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 13.224 seconds (JVM running for 16.371)
+2024-03-28 17:34:58.736 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:34:58.736 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:34:58.738 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-03-28 17:38:50.200 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 21256 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:38:50.206 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:38:51.186 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:38:51.251 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 60 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:38:52.073 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:38:52.082 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:38:52.083 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:38:52.083 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:38:52.318 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:38:52.318 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2001 ms
+2024-03-28 17:38:52.542 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:38:52.673 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:38:54.472 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:38:56.582 [cluster-ClusterId{value='66053aae7c5cc859f38c8555', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:38:57.196 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:38:57.373 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:38:57.382 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 8.054 seconds (JVM running for 10.45)
+2024-03-28 17:39:20.146 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:39:20.147 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:39:20.148 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-28 17:40:22.139 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 1088 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:40:22.148 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:40:23.067 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:40:23.127 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 54 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:40:24.081 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:40:24.090 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:40:24.091 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:40:24.091 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:40:24.346 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:40:24.347 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2085 ms
+2024-03-28 17:40:24.572 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:40:24.710 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:40:26.518 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:40:28.626 [cluster-ClusterId{value='66053b0a2d2334306ccf8560', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:40:29.442 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:40:29.639 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:40:29.648 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 8.569 seconds (JVM running for 10.935)
+2024-03-28 17:41:08.030 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:41:08.031 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:41:08.033 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-03-28 17:41:09.068 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 351ms} 
+2024-03-28 17:41:09.071 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 17:41:09.072 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:41:09.072 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:41:09.074 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:41:09.075 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 17:41:09.078 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 17:41:09.086 [Druid-ConnectionPool-Create-264138968] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 17:41:09.088 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:41:09.089 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:41:09.092 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:41:09.144 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:41:09.146 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        user_id, user_name, password, user_remark
+     
+        from t_user
+        where user_name=?
+        and password=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@e51ed6e
+2024-03-28 17:41:09.151 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "heming") returned 
+2024-03-28 17:41:09.152 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "Y6YSJVfPufKu78mjUAPvtA==") returned 
+2024-03-28 17:41:09.152 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:41:09.188 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. select user_id, user_name, password, user_remark from t_user where user_name='heming' and password='Y6YSJVfPufKu78mjUAPvtA=='  {executed in 33 ms}
+2024-03-28 17:41:09.188 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 17:41:09.198 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 17:41:09.199 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@50647ad4
+2024-03-28 17:41:09.209 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@ef2b02e - Field level information: 
+	com.mysql.cj.result.Field@7e620211[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_id,originalColumnName=user_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@293d659d[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_name,originalColumnName=user_name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@5e3dc478[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=password,originalColumnName=password,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@45d56c51[dbName=hmblogs,tableName=t_user,originalTableName=t_user,columnName=user_remark,originalColumnName=user_remark,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+2024-03-28 17:41:09.215 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 17:41:09.216 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 17:41:09.220 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(user_id) returned 1
+2024-03-28 17:41:09.220 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_name) returned heming
+2024-03-28 17:41:09.221 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(password) returned Y6YSJVfPufKu78mjUAPvtA==
+2024-03-28 17:41:09.221 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(user_remark) returned 发生的
+2024-03-28 17:41:09.224 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 
+|--------|----------|-------------------------|------------|
+|user_id |user_name |password                 |user_remark |
+|--------|----------|-------------------------|------------|
+|1       |heming    |Y6YSJVfPufKu78mjUAPvtA== |发生的         |
+|--------|----------|-------------------------|------------|
+
+2024-03-28 17:41:09.225 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 17:41:09.226 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 17:41:09.226 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@53137bb2
+2024-03-28 17:41:09.227 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 17:41:09.227 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 17:41:09.228 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:41:09.231 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:41:09.231 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:46:02.251 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:46:02.253 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:46:02.254 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:46:02.254 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:46:02.254 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:46:02.254 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@516a954a
+2024-03-28 17:46:02.254 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:46:02.259 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 5 ms}
+2024-03-28 17:46:02.260 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 17:46:02.260 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 17:46:02.260 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@12863708
+2024-03-28 17:46:02.260 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@7ca2cf1a - Field level information: 
+	com.mysql.cj.result.Field@46e01ca8[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-28 17:46:02.260 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 17:46:02.261 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 17:46:02.262 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 0
+2024-03-28 17:46:02.262 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.wasNull() returned false
+2024-03-28 17:46:02.262 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|0              |
+|---------------|
+
+2024-03-28 17:46:02.262 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@1043854f
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:46:02.263 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2b11508d
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 0) returned 
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 10) returned 
+2024-03-28 17:46:02.264 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:46:02.269 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 0,10  {executed in 4 ms}
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1b918221
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@65d4a876 - Field level information: 
+	com.mysql.cj.result.Field@6931307e[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@480580ed[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@5f128346[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@1f4517ca[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@7f97669c[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1bf1836b[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@50b23be0[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+|blog_id |blog_title |blog_content |created_by |created_datetime |last_updated_by |last_updated_datetime |
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+|--------|-----------|-------------|-----------|-----------------|----------------|----------------------|
+
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 17:46:02.270 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@2319a48e
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:46:02.271 [http-nio-8081-exec-8] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:53:00.475 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:53:00.475 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:53:00.475 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:53:00.476 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:53:00.476 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:53:00.476 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime)
+        values(?,?,?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@423ab6cd
+2024-03-28 17:53:00.476 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(1, 1111) returned 
+2024-03-28 17:53:00.477 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(2, 1111) returned 
+2024-03-28 17:53:00.477 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(3, 1111) returned 
+2024-03-28 17:53:00.477 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:53:00.498 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:53:00.501 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:53:00.501 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:53:00.557 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:53:00.557 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@5379abba
+2024-03-28 17:53:00.557 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:53:00.557 [http-nio-8081-exec-10] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:54:21.800 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-03-28 17:54:21.807 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 6ms} 
+2024-03-28 17:54:21.808 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-03-28 17:54:21.809 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-03-28 17:54:41.132 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 21340 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:54:41.147 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:54:42.555 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:54:42.704 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 142 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:54:44.336 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:54:44.359 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:54:44.362 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:54:44.362 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:54:44.656 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:54:44.656 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3276 ms
+2024-03-28 17:54:44.891 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:54:45.099 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:54:47.260 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:54:49.374 [cluster-ClusterId{value='66053e67aad81e69408c96da', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:54:50.420 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:54:50.755 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:54:50.764 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 11.123 seconds (JVM running for 14.391)
+2024-03-28 17:55:02.139 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:55:02.140 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:55:02.141 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-28 17:55:02.576 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 348ms} 
+2024-03-28 17:55:02.577 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 17:55:02.578 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:55:02.578 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:55:02.579 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:55:02.580 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 17:55:02.588 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 17:55:02.592 [Druid-ConnectionPool-Create-170611939] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 17:55:02.593 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:55:02.594 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:55:02.595 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:55:02.633 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:55:02.634 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime)
+        values(?,?,?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3ce0827
+2024-03-28 17:55:02.639 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(1, 1111) returned 
+2024-03-28 17:55:02.639 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(2, 1111) returned 
+2024-03-28 17:55:02.639 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-28 17:55:02.639 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:55:02.694 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:55:02.699 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:55:02.699 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:55:02.743 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:55:02.743 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@3994bc82
+2024-03-28 17:55:02.743 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:55:02.743 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:56:15.938 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 3952 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:56:15.945 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:56:16.814 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:56:16.870 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 51 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:56:17.688 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:56:17.697 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:56:17.699 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:56:17.699 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:56:17.962 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:56:17.962 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1887 ms
+2024-03-28 17:56:18.191 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:56:18.313 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:56:20.070 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:56:22.477 [cluster-ClusterId{value='66053ec44c0d645607c0d59c', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:56:22.784 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:56:22.999 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:56:23.009 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 8.041 seconds (JVM running for 10.581)
+2024-03-28 17:56:30.093 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:56:30.093 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:56:30.094 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-03-28 17:56:30.540 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 353ms} 
+2024-03-28 17:56:30.541 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 17:56:30.542 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:56:30.543 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:56:30.543 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:56:30.543 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 17:56:30.547 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 17:56:30.551 [Druid-ConnectionPool-Create-1663271865] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 17:56:30.552 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:56:30.553 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:56:30.555 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:56:30.587 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:56:30.588 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@21499fb6
+2024-03-28 17:56:30.594 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(1, 1111) returned 
+2024-03-28 17:56:30.594 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(2, 1111) returned 
+2024-03-28 17:56:30.595 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-28 17:56:30.595 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-28 17:56:30.595 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:56:30.651 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:56:30.657 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:56:30.657 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:56:30.707 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:56:30.707 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@693bfdb2
+2024-03-28 17:56:30.707 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:56:30.707 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:58:04.792 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:58:04.794 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:58:04.794 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:58:04.794 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1aa67e29
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(1, 1111) returned 
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setNull(2, 1111) returned 
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-28 17:58:04.795 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:58:04.806 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:58:04.806 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:58:04.806 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:58:35.830 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 1688 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-03-28 17:58:35.839 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 17:58:36.870 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-03-28 17:58:36.931 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 56 ms. Found 1 MongoDB repository interfaces.
+2024-03-28 17:58:37.792 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-03-28 17:58:37.801 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:58:37.802 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-03-28 17:58:37.802 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-03-28 17:58:38.045 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-03-28 17:58:38.045 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2088 ms
+2024-03-28 17:58:38.338 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-03-28 17:58:38.467 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-03-28 17:58:40.365 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-03-28 17:58:42.734 [cluster-ClusterId{value='66053f50c201386681395007', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-03-28 17:58:43.456 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-03-28 17:58:43.719 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-03-28 17:58:43.733 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 8.922 seconds (JVM running for 11.465)
+2024-03-28 17:59:01.578 [http-nio-8081-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 17:59:01.579 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-03-28 17:59:01.581 [http-nio-8081-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-03-28 17:59:10.676 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 292ms} 
+2024-03-28 17:59:10.677 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-03-28 17:59:10.677 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:59:10.677 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:59:10.678 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:59:10.678 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-03-28 17:59:10.681 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-03-28 17:59:10.685 [Druid-ConnectionPool-Create-295937119] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-03-28 17:59:10.685 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 17:59:10.686 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:59:10.687 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 17:59:10.705 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 17:59:10.705 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@65c1b6c7
+2024-03-28 17:59:10.708 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "如何学习使用OAuth") returned 
+2024-03-28 17:59:10.709 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和") returned 
+2024-03-28 17:59:10.709 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-28 17:59:10.709 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-28 17:59:10.709 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 17:59:10.766 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('如何学习使用OAuth','fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和','heming',now(),'heming',now())  {executed in 56 ms}
+2024-03-28 17:59:10.766 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-03-28 17:59:10.766 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-03-28 17:59:10.766 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 17:59:10.768 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 17:59:10.768 [http-nio-8081-exec-1] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:02.846 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@45267e19
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "如何学习使用AES") returned 
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "第一步，。第二步，。第三步，。") returned 
+2024-03-28 18:00:02.847 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-03-28 18:00:02.848 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-03-28 18:00:02.848 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('如何学习使用AES','第一步，。第二步，。第三步，。','heming',now(),'heming',now())  {executed in 22 ms}
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 18:00:02.870 [http-nio-8081-exec-3] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:36.761 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:36.762 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:36.762 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 18:00:36.762 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 18:00:36.762 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+        count(blog_id)
+        from t_blog) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@73649dac
+2024-03-28 18:00:36.762 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:36.777 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. select count(blog_id) from t_blog  {executed in 14 ms}
+2024-03-28 18:00:36.778 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 18:00:36.780 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 18:00:36.780 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1fa6042
+2024-03-28 18:00:36.784 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@5ee6a562 - Field level information: 
+	com.mysql.cj.result.Field@5e31bc44[dbName=null,tableName=null,originalTableName=null,columnName=count(blog_id),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-28 18:00:36.786 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 18:00:36.786 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 18:00:36.788 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(count(blog_id)) returned 2
+2024-03-28 18:00:36.791 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 
+|---------------|
+|count(blog_id) |
+|---------------|
+|2              |
+|---------------|
+
+2024-03-28 18:00:36.791 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 18:00:36.791 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 18:00:36.791 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@fd0b4f3
+2024-03-28 18:00:36.791 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 18:00:36.792 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 18:00:36.793 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 18:00:36.794 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 18:00:36.794 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(select
+         
+        blog_id, blog_title, blog_content, created_by, created_datetime,
+            last_updated_by, last_updated_datetime
+     
+        from t_blog
+        limit ?,?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2df90cc7
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(1, 0) returned 
+2024-03-28 18:00:36.795 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setInt(2, 10) returned 
+2024-03-28 18:00:36.796 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-03-28 18:00:36.799 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. select blog_id, blog_title, blog_content, created_by, created_datetime, last_updated_by, last_updated_datetime 
+from t_blog limit 0,10  {executed in 3 ms}
+2024-03-28 18:00:36.799 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned true
+2024-03-28 18:00:36.799 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.new ResultSet returned 
+2024-03-28 18:00:36.799 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@538a9665
+2024-03-28 18:00:36.799 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@5977c7cb - Field level information: 
+	com.mysql.cj.result.Field@6ca6979e[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_id,originalColumnName=blog_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@95c31f9[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_title,originalColumnName=blog_title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@e62b709[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=blog_content,originalColumnName=blog_content,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@694c6091[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_by,originalColumnName=created_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@310e1041[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=created_datetime,originalColumnName=created_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@59353c60[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_by,originalColumnName=last_updated_by,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= BINARY, charsetIndex=46, charsetName=utf8]
+	com.mysql.cj.result.Field@42f402b0[dbName=hmblogs,tableName=t_blog,originalTableName=t_blog,columnName=last_updated_datetime,originalColumnName=last_updated_datetime,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2024-03-28 18:00:36.800 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getType() returned 1003
+2024-03-28 18:00:36.800 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 18:00:36.800 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 1
+2024-03-28 18:00:36.800 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用OAuth
+2024-03-28 18:00:36.800 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和
+2024-03-28 18:00:36.801 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 17:59:10.0
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 17:59:10.0
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned true
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getInt(blog_id) returned 2
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_title) returned 如何学习使用AES
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(blog_content) returned 第一步，。第二步，。第三步，。
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(created_by) returned heming
+2024-03-28 18:00:36.802 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(created_datetime) returned 2024-03-28 18:00:02.0
+2024-03-28 18:00:36.803 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getString(last_updated_by) returned heming
+2024-03-28 18:00:36.803 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.getTimestamp(last_updated_datetime) returned 2024-03-28 18:00:02.0
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|blog_id |blog_title  |blog_content                                                                                |created_by |created_datetime      |last_updated_by |last_updated_datetime |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+|1       |如何学习使用OAuth |fdsfafadsfadsfasdfasdffffffffffffffffffffffffffffffffffffffffffffffasdfadsfasdfasdfdasfdsf和 |heming     |2024-03-28 17:59:10.0 |heming          |2024-03-28 17:59:10.0 |
+|2       |如何学习使用AES   |第一步，。第二步，。第三步，。                                                                             |heming     |2024-03-28 18:00:02.0 |heming          |2024-03-28 18:00:02.0 |
+|--------|------------|--------------------------------------------------------------------------------------------|-----------|----------------------|----------------|----------------------|
+
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.next() returned false
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. ResultSet.close() returned void
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@4fceb873
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getMoreResults() returned false
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned -1
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-03-28 18:00:36.804 [http-nio-8081-exec-5] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-03-28 18:07:16.379 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-03-28 18:07:16.387 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 7ms} 
+2024-03-28 18:07:16.387 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-03-28 18:07:16.388 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
